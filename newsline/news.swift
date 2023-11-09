@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+
+struct News{
+    
+    var title = ""
+    var subtitle = ""
+}
