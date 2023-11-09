@@ -47,7 +47,7 @@ class TableViewController: UITableViewController {
 
         
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath)
 
             // Configure the cell...\
             let labelTitle = cell.viewWithTag(1000) as! UILabel
@@ -60,11 +60,11 @@ class TableViewController: UITableViewController {
         }
         
             
-        override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-            return 400
-            
-        }
+//        override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        
+//            return 
+//            
+//        }
     
     
         /*
