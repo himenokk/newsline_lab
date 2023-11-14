@@ -9,7 +9,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
  
-        var arrNews = [News(title: "Australian ports resume some operations after major cyberattack", subtitle: "One of Australia’s biggest port operators has restarted some operations after a crippling cyberattack that led to a huge backup of cargo. DP World Australia, which manages the flow of nearly 40% of the country’s goods and is owned by Dubai-based logistics giant DP World, announced Monday that the resumption came three days following a breach of its IT systems." ),News(title: "Whatever happened to NFTs?", subtitle: "In the latest episode of The Simpsons the hapless dad turns his son Bart, and then himself, into NFTs to make It all goes wrong when Homer finds out from a floating pizza cat that the NFT craze is The episode has been widely applauded by NFT fans and sceptics alike for successfully poking fun at a side of the crypto world that exploded a couple of years ago but has now gone very quiet."), News(title: "Apple’s Swift Student Challenge to open in February 2024 with new Distinguished Winners category", subtitle: "Apple’s Swift Student Challenge has given thousands of students around the world the opportunity to showcase their creativity and build real-world skills to take into their careers and beyond. Since 2020, students participating in the challenge have joined a worldwide community of developers using Swift — the same programming language used by professionals — to create the next wave of groundbreaking apps. The next challenge will open in February 2024, and will include a new category recognizing 50 Distinguished Winners, who will be named for standout submissions.")]
+        var arrNews = [News(title: "Australian ports resume some operations after major cyberattack", subtitle: "One of Australia’s biggest port operators has restarted some operations after a crippling cyberattack that led to a huge backup of cargo. DP World Australia, which manages the flow of nearly 40% of the country’s goods and is owned by Dubai-based logistics giant DP World, announced Monday that the resumption came three days following a breach of its IT systems.", date: "" ),News(title: "Whatever happened to NFTs?", subtitle: "In the latest episode of The Simpsons the hapless dad turns his son Bart, and then himself, into NFTs to make It all goes wrong when Homer finds out from a floating pizza cat that the NFT craze is The episode has been widely applauded by NFT fans and sceptics alike for successfully poking fun at a side of the crypto world that exploded a couple of years ago but has now gone very quiet.", date: ""), News(title: "Apple’s Swift Student Challenge to open in February 2024 with new Distinguished Winners category", subtitle: "Apple’s Swift Student Challenge has given thousands of students around the world the opportunity to showcase their creativity and build real-world skills to take into their careers and beyond. Since 2020, students participating in the challenge have joined a worldwide community of developers using Swift — the same programming language used by professionals — to create the next wave of groundbreaking apps. The next challenge will open in February 2024, and will include a new category recognizing 50 Distinguished Winners, who will be named for standout submissions.", date: "")]
         
         var timer = Timer()
     
@@ -17,7 +17,7 @@ class TableViewController: UITableViewController {
         
     
         
-        @IBOutlet weak var dateLabel: UILabel!
+//        @IBOutlet weak var dateLabel: UILabel!
     
     
         override func viewDidLoad() {
@@ -83,6 +83,10 @@ class TableViewController: UITableViewController {
 
             let labelSubtitle = cell.viewWithTag(1001) as! UILabel
             labelSubtitle.text = arrNews[indexPath.row].subtitle
+            
+            let labelDate = cell.viewWithTag(1004) as! UILabel
+            labelDate.text! = arrNews[indexPath.row].date
+            
             
             return cell
         }
