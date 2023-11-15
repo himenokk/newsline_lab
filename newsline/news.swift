@@ -12,5 +12,5 @@ struct News{
     
     var title = ""
     var subtitle = ""
-    var date = ""
+    var dateTime = ""
 }
